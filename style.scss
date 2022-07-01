@@ -1,0 +1,92 @@
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f1f1f1;
+}
+.slider {
+    width: 900px;
+    height: 600px;
+    margin: 100px auto 0;
+    position: relative;
+    .cont-slides {
+        width: 100%;
+        aspect-ratio: 1/1;
+        img {
+            width: 100%;
+            height: auto;
+            position: absolute;
+            opacity: 0;
+            transition: opacity 0.2s ease-in-out;
+            &.active {
+                opacity: 1 !important;
+            }
+        }
+    }
+
+    .commandes {
+        top: 0;
+        width: 100%;
+        aspect-ratio: 1/1;
+        position: absolute;
+        button {
+            position: absolute;
+            width: 80px;
+            aspect-ratio: 1/1;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            img {
+                width: 30px;
+                position: relative;
+            }
+            &:nth-child(1) {
+                top: 33%;
+                transform: translateY(-50%);
+                left: 5px;
+                img {
+                    left: -4px;
+                }
+            }
+            &:nth-child(2) {
+                top: 33%;
+                transform: translateY(-50%);
+                right: 5px;
+                img {
+                    right: -4px;
+                }
+            }
+        }
+    }
+    .cercles {
+        position: absolute;
+        top: 110%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 300px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .cercle {
+            width: 50px;
+            aspect-ratio: 1/1;
+            border-radius: 50%;
+            margin: 5px;
+            cursor: pointer;
+            outline: none;
+            border: 1px solid #333;
+            &.active-cercle {
+                background: rgb(58, 36, 156);
+            }
+        }
+    }
+}

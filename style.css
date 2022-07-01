@@ -1,0 +1,123 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f1f1f1;
+}
+
+.slider {
+  width: 900px;
+  height: 600px;
+  margin: 100px auto 0;
+  position: relative;
+}
+
+.slider .cont-slides {
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+
+.slider .cont-slides img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.slider .cont-slides img.active {
+  opacity: 1 !important;
+}
+
+.slider .commandes {
+  top: 0;
+  width: 100%;
+  aspect-ratio: 1/1;
+  position: absolute;
+}
+
+.slider .commandes button {
+  position: absolute;
+  width: 80px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+
+.slider .commandes button img {
+  width: 30px;
+  position: relative;
+}
+
+.slider .commandes button:nth-child(1) {
+  top: 33%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 5px;
+}
+
+.slider .commandes button:nth-child(1) img {
+  left: -4px;
+}
+
+.slider .commandes button:nth-child(2) {
+  top: 33%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 5px;
+}
+
+.slider .commandes button:nth-child(2) img {
+  right: -4px;
+}
+
+.slider .cercles {
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 300px;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.slider .cercles .cercle {
+  width: 50px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  margin: 5px;
+  cursor: pointer;
+  outline: none;
+  border: 1px solid #333;
+}
+
+.slider .cercles .cercle.active-cercle {
+  background: #3a249c;
+}
+/*# sourceMappingURL=style.css.map */
